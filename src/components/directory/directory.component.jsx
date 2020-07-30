@@ -13,18 +13,21 @@ class Directory extends React.Component {
           imageUrl:
             "https://images.unsplash.com/photo-1571986929789-95307bbfa7c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
           id: 1,
+          linkUrl: "trucks",
         },
         {
           title: "suvs",
           imageUrl:
             "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80",
           id: 2,
+          linkUrl: "",
         },
         {
           title: "sedans",
           imageUrl:
             "https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
           id: 3,
+          linkUrl: "",
         },
         {
           title: "coupes",
@@ -32,6 +35,7 @@ class Directory extends React.Component {
             "https://images.unsplash.com/photo-1591567783286-b4ab19455406?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80",
           id: 4,
           size: "large",
+          linkUrl: "",
         },
         {
           title: "exotics",
@@ -39,6 +43,7 @@ class Directory extends React.Component {
             "https://images.unsplash.com/photo-1517779894653-4c49f68b4d66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1117&q=80",
           id: 5,
           size: "large",
+          linkUrl: "",
         },
       ],
     };
@@ -47,8 +52,8 @@ class Directory extends React.Component {
   render() {
     return (
       <div className="directory-menu">
-        {this.state.sections.map(({ title, imageUrl, id, size }) => (
-          <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
+        {this.state.sections.map(({ id, ...otherSectionProps }) => (
+          <MenuItem key={id} {...otherSectionProps} />
         ))}
       </div>
     );
