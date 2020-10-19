@@ -25,10 +25,12 @@
 
 - [] Set up Firebase
   - [x] Add firebase to project
-  - [] Authentication
+  - [x] Authentication
   - [] Data persistence
   - https://firebase.google.com/docs/web/setup
   - https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial
+- where to store user state for app?
+- [] store user state in App Component so we can pass down to other componenets
 
 ### Redux
 
