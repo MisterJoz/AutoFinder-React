@@ -31,6 +31,7 @@
   - https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial
 - where to store user state for app?
 - [] store user state in App Component so we can pass down to other componenets
+- [] how to store google sign in user in firestore?
 
 ### Redux
 
